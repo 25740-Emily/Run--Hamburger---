@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dwotrxjnhiot6"]
+
+[ext_resource type="Script" uid="uid://ff8m6thndya4" path="res://scripts/hamburger(player).gd" id="1_bswci"]
+[ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="2_rus8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
+size = Vector2(128, 128)
+
+[node name="level1" type="Node2D" unique_id=1738761563]
+
+[node name="Hamburger(player)" type="CharacterBody2D" parent="." unique_id=1252512214]
+position = Vector2(8, 24)
+script = ExtResource("1_bswci")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Hamburger(player)" unique_id=1866364762]
+texture = ExtResource("2_rus8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburger(player)" unique_id=685636185]
+shape = SubResource("RectangleShape2D_5xbjy")
