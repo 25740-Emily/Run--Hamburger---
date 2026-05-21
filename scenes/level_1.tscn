@@ -6,11 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
 size = Vector2(128, 128)
 
-[node name="level1" type="Node2D" unique_id=1738761563]
-position = Vector2(88, 40)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
+size = Vector2(312, 32)
 
-[node name="Hamburger(player)" type="CharacterBody2D" parent="." unique_id=1252512214]
-position = Vector2(8, 24)
+[node name="level1" type="Node2D" unique_id=718702925]
+position = Vector2(105.420105, 77.34601)
+
+[node name="Hamburger(player)" type="CharacterBody2D" parent="." unique_id=1597701963]
+position = Vector2(-32, 296)
 script = ExtResource("1_bswci")
 metadata/_edit_group_ = true
 
@@ -19,3 +22,18 @@ texture = ExtResource("2_rus8k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburger(player)" unique_id=685636185]
 shape = SubResource("RectangleShape2D_5xbjy")
+
+[node name="Camera2D" type="Camera2D" parent="Hamburger(player)" unique_id=717875312]
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=2127297013]
+position = Vector2(-89.420105, 482.654)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform1" unique_id=1950354608]
+position = Vector2(96, 56)
+scale = Vector2(2.375, 0.25)
+texture = ExtResource("2_rus8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1459184375]
+position = Vector2(100, 56)
+shape = SubResource("RectangleShape2D_rus8k")
