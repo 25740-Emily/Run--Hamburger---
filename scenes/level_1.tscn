@@ -15,6 +15,9 @@ size = Vector2(568, 24)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nkto"]
 size = Vector2(272, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcfvj"]
+size = Vector2(439, 31)
+
 [node name="level1" type="Node2D" unique_id=718702925]
 
 [node name="Hamburger(player)" type="CharacterBody2D" parent="." unique_id=1597701963]
@@ -68,3 +71,16 @@ texture = ExtResource("2_rus8k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform3" unique_id=820067575]
 position = Vector2(456, 453)
 shape = SubResource("RectangleShape2D_4nkto")
+
+[node name="platform4" type="StaticBody2D" parent="." unique_id=593866208]
+position = Vector2(1465, 548)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="platform4" unique_id=2106159998]
+position = Vector2(262, 75)
+scale = Vector2(3.3671875, 0.17187503)
+texture = ExtResource("2_rus8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform4" unique_id=368902391]
+position = Vector2(261.5, 74.5)
+shape = SubResource("RectangleShape2D_fcfvj")

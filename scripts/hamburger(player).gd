@@ -13,7 +13,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		else:
+	else:
 			# Reset jump count when landing on the ground
 			jump_count = 0
 
