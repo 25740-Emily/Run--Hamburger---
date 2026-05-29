@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ff8m6thndya4" path="res://scripts/hamburger(player).gd" id="1_bswci"]
 [ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="2_rus8k"]
+[ext_resource type="Script" uid="uid://7iqij0a1lsyr" path="res://scripts/portal(fountain).gd" id="3_rus8k"]
+[ext_resource type="Script" uid="uid://top6k8f0oul8" path="res://scripts/coin.gd" id="4_5xbjy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
 size = Vector2(128, 128)
@@ -17,6 +19,12 @@ size = Vector2(272, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fcfvj"]
 size = Vector2(439, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa8r4"]
+size = Vector2(144, 200)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rus8k"]
+radius = 32.0
 
 [node name="level1" type="Node2D" unique_id=718702925]
 
@@ -73,7 +81,7 @@ position = Vector2(456, 453)
 shape = SubResource("RectangleShape2D_4nkto")
 
 [node name="platform4" type="StaticBody2D" parent="." unique_id=593866208]
-position = Vector2(1465, 548)
+position = Vector2(1472, 576)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="platform4" unique_id=2106159998]
@@ -84,3 +92,34 @@ texture = ExtResource("2_rus8k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform4" unique_id=368902391]
 position = Vector2(261.5, 74.5)
 shape = SubResource("RectangleShape2D_fcfvj")
+
+[node name="portal(fountain)" type="Area2D" parent="." unique_id=1809142837]
+position = Vector2(2008, 520)
+script = ExtResource("3_rus8k")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="portal(fountain)" unique_id=1504568993]
+position = Vector2(8, 19.999996)
+scale = Vector2(1.125, 1.5625)
+texture = ExtResource("2_rus8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal(fountain)" unique_id=1721197584]
+position = Vector2(8, 20)
+shape = SubResource("RectangleShape2D_pa8r4")
+
+[node name="coin" type="Area2D" parent="." unique_id=1451462865]
+position = Vector2(-80, 216)
+script = ExtResource("4_5xbjy")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="coin" unique_id=628821141]
+position = Vector2(322, 17.999998)
+scale = Vector2(0.34375015, 0.34375)
+texture = ExtResource("2_rus8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin" unique_id=1516728115]
+position = Vector2(320, 16)
+shape = SubResource("CircleShape2D_rus8k")
+
+[connection signal="body_entered" from="portal(fountain)" to="portal(fountain)" method="_on_body_entered"]
+[connection signal="body_entered" from="coin" to="coin" method="_on_body_entered"]
