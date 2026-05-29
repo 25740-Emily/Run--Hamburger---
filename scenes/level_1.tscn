@@ -9,7 +9,7 @@
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
-size = Vector2(312, 34.65399)
+size = Vector2(306.4201, 32.654022)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bswci"]
 size = Vector2(568, 24)
@@ -18,7 +18,7 @@ size = Vector2(568, 24)
 size = Vector2(272, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fcfvj"]
-size = Vector2(439, 31)
+size = Vector2(439, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa8r4"]
 size = Vector2(144, 200)
@@ -51,7 +51,7 @@ scale = Vector2(2.375, 0.25)
 texture = ExtResource("2_rus8k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1459184375]
-position = Vector2(100, 54.673035)
+position = Vector2(97.21005, 55.673035)
 shape = SubResource("RectangleShape2D_rus8k")
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=797389595]
@@ -90,7 +90,7 @@ scale = Vector2(3.3671875, 0.17187503)
 texture = ExtResource("2_rus8k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform4" unique_id=368902391]
-position = Vector2(261.5, 74.5)
+position = Vector2(261.5, 75.5)
 shape = SubResource("RectangleShape2D_fcfvj")
 
 [node name="portal(fountain)" type="Area2D" parent="." unique_id=1809142837]
