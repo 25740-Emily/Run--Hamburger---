@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bxcwqb52fw3q8"]
+
+[ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="1_8juob"]
+
+[node name="Score" type="Control" unique_id=981005857]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=692230039]
+layout_mode = 0
+offset_left = 120.0
+offset_top = -32.0
+offset_right = 157.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1981285884]
+position = Vector2(14.175993, 8.999989)
+texture = ExtResource("1_8juob")
