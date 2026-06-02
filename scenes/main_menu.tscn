@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://y37unso80avi"]
+
+[node name="main menu" type="Node2D" unique_id=684897392]
+
+[node name="Control" type="Control" parent="." unique_id=381974322]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -146.0
+offset_top = -416.0
+offset_right = 140.0
+offset_bottom = -128.0
