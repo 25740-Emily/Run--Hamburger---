@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://7shffbnq7xys"]
+
+[ext_resource type="Script" uid="uid://dvmjbvgqqriuw" path="res://scripts/current_level.gd" id="1_0mame"]
+
+[node name="Current level" type="Control" unique_id=1831176626]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0mame")
+
+[node name="level label" type="Label" parent="." unique_id=310253255]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 24.0
+text = "current level: 1"
