@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bpwr6268k1uts"]
+
+[ext_resource type="PackedScene" uid="uid://7shffbnq7xys" path="res://scenes/current_level.tscn" id="1_6av8n"]
+[ext_resource type="PackedScene" uid="uid://cesawnjdbwvtt" path="res://scenes/life_bar.tscn" id="2_6syxi"]
+[ext_resource type="PackedScene" uid="uid://bxcwqb52fw3q8" path="res://scenes/score.tscn" id="3_6gmgv"]
+
+[node name="UILayer" type="CanvasLayer" unique_id=501483185]
+
+[node name="Current level" parent="." unique_id=1831176626 instance=ExtResource("1_6av8n")]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="life bar" parent="." unique_id=551103358 instance=ExtResource("2_6syxi")]
+offset_left = 384.0
+offset_top = 24.0
+offset_right = 838.0
+offset_bottom = 152.0
+
+[node name="Score" parent="." unique_id=981005857 instance=ExtResource("3_6gmgv")]
+offset_left = 64.0
+offset_top = 104.0
+offset_right = 104.0
+offset_bottom = 144.0

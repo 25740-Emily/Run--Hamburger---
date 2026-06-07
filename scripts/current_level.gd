@@ -9,7 +9,7 @@ func _ready()-> void:
 	# This function runs automatically as soon as this HUD element enters the game world
 	update_level_name()
 
-func update_level_name() -> viod:
+func update_level_name() -> void:
 	# 1. Get the current active root scene node (e.g., Level1 or Level2)
 	var current_scene = get_tree().current_scene
 	

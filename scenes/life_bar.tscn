@@ -6,8 +6,8 @@
 [node name="life bar" type="HBoxContainer" unique_id=551103358]
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 48.0
-offset_bottom = 48.0
+offset_right = 462.0
+offset_bottom = 136.0
 theme_override_constants/separation = 35
 script = ExtResource("1_nkuye")
 
