@@ -13,13 +13,11 @@ offset_right = 56.0
 offset_bottom = 56.0
 
 [node name="life bar" parent="." unique_id=551103358 instance=ExtResource("2_6syxi")]
-offset_left = 384.0
-offset_top = 24.0
-offset_right = 838.0
-offset_bottom = 152.0
+offset_left = 512.0
+offset_top = 16.0
+offset_right = 966.0
+offset_bottom = 144.0
 
 [node name="Score" parent="." unique_id=981005857 instance=ExtResource("3_6gmgv")]
-offset_left = 64.0
-offset_top = 104.0
-offset_right = 104.0
-offset_bottom = 144.0
+offset_top = 64.0
+offset_bottom = 104.0

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cvya3ydk5sruv"]
+
+[ext_resource type="Texture2D" uid="uid://dg6bjc8t7rytx" path="res://home-icon_14316388.png" id="1_krot7"]
+
+[node name="Home" type="Control" unique_id=1328583996]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997452356]
+position = Vector2(29, 27)
+scale = Vector2(0.29166666, 0.29166666)
+texture = ExtResource("1_krot7")

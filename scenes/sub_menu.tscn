@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://df08qdgbqem41"]
+
+[node name="sub menu" type="Node2D" unique_id=228701830]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=149528660]
+offset_left = -1.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 189.0
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=1780767476]
+layout_mode = 2
+
+[node name="restart" type="Button" parent="HBoxContainer/Control" unique_id=1021321749]
+layout_mode = 0
+offset_right = 103.0
+offset_bottom = 34.0
+text = "restart"
+
+[node name="main menu" type="Button" parent="HBoxContainer/Control" unique_id=1597758930]
+layout_mode = 0
+offset_top = 69.0
+offset_right = 106.0
+offset_bottom = 100.0
+text = "menu"
+
+[node name="Button" type="Button" parent="HBoxContainer/Control" unique_id=2110552279]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 128.0
+offset_right = 107.0
+offset_bottom = 159.0
+text = "pause"
