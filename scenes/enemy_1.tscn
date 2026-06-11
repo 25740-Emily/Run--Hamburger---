@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cmpm1pby4kmyj"]
+
+[ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="1_tcmaw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1412"]
+size = Vector2(129, 129)
+
+[node name="enemy1" type="CharacterBody2D" unique_id=575265585]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1826892858]
+texture = ExtResource("1_tcmaw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470123763]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_a1412")

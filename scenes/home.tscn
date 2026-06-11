@@ -1,14 +1,22 @@
 [gd_scene format=3 uid="uid://cvya3ydk5sruv"]
 
 [ext_resource type="Texture2D" uid="uid://dg6bjc8t7rytx" path="res://home-icon_14316388.png" id="1_krot7"]
+[ext_resource type="Script" uid="uid://tlfjywk7ed11" path="res://scripts/home.gd" id="1_u4wd2"]
 
 [node name="Home" type="Control" unique_id=1328583996]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_u4wd2")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997452356]
-position = Vector2(29, 27)
+[node name="Homebutton" type="TextureButton" parent="." unique_id=733820113]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 27.0
+offset_right = 29.0
+offset_bottom = 27.0
 scale = Vector2(0.29166666, 0.29166666)
-texture = ExtResource("1_krot7")
+texture_normal = ExtResource("1_krot7")
+
+[connection signal="pressed" from="Homebutton" to="." method="_on_homebutton_pressed"]

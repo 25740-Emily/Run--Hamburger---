@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://df08qdgbqem41"]
 
+[ext_resource type="Script" uid="uid://dhbh3mdstg6dt" path="res://scripts/sub_menu.gd" id="1_k1p16"]
+
 [node name="sub menu" type="Node2D" unique_id=228701830]
+script = ExtResource("1_k1p16")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=149528660]
 offset_left = -1.0
