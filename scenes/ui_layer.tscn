@@ -14,6 +14,7 @@ offset_right = 56.0
 offset_bottom = 56.0
 
 [node name="life bar" parent="." unique_id=551103358 instance=ExtResource("2_6syxi")]
+unique_name_in_owner = true
 offset_left = 512.0
 offset_top = 16.0
 offset_right = 966.0

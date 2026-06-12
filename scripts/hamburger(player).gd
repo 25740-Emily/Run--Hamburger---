@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var current_lives: int = 3
-@onready var life_bar = $"."
+@onready var life_bar: HBoxContainer = get_parent().find_child("life bar", true, false)
 
 func _ready() -> void:
 	if life_bar:
@@ -16,7 +16,7 @@ func take_damage() -> void:
 		die()
 func die() -> void:
 	print("Game Over!")
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0

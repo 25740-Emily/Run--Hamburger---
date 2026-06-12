@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1412"]
 size = Vector2(51.5, 47.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejytf"]
+size = Vector2(55, 50)
+
 [node name="enemy1" type="CharacterBody2D" unique_id=575265585]
 script = ExtResource("1_a1412")
 
@@ -17,3 +20,11 @@ texture = ExtResource("1_tcmaw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470123763]
 position = Vector2(72.25, 52.25)
 shape = SubResource("RectangleShape2D_a1412")
+
+[node name="damagearea" type="Area2D" parent="." unique_id=554731191]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damagearea" unique_id=905948314]
+position = Vector2(72.5, 52)
+shape = SubResource("RectangleShape2D_ejytf")
+
+[connection signal="body_entered" from="damagearea" to="." method="_on_damagearea_body_entered"]

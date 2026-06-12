@@ -29,3 +29,12 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x = direction * speed
 	move_and_slide()
+	
+	
+func _on_damagearea_body_entered(body: Node2D) -> void:
+	if body.name == "Hamburger(player)":
+		# Check if the player has the "take_damage" function, then call it
+		if body.has_method("take_damage"):
+			body.take_damage()
+
+	pass # Replace with function body.
