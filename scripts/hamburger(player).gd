@@ -1,5 +1,23 @@
 extends CharacterBody2D
 
+var current_lives: int = 3
+@onready var life_bar = $"."
+
+func _ready() -> void:
+	if life_bar:
+		life_bar.update_lives(current_lives)
+		
+func take_damage() -> void:
+	current_lives -= 1
+	if life_bar:
+		life_bar.update_lives(current_lives)
+		
+	if current_lives <= 0:
+		die()
+func die() -> void:
+	print("Game Over!")
+	get_tree().reload_current_scene()
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var start_position = Vector2(-32,296)

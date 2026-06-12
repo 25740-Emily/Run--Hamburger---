@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://cmpm1pby4kmyj"]
 
+[ext_resource type="Script" uid="uid://st2x7qv7m72j" path="res://scripts/enemy_1.gd" id="1_a1412"]
 [ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="1_tcmaw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1412"]
-size = Vector2(129, 129)
+size = Vector2(51.5, 47.5)
 
 [node name="enemy1" type="CharacterBody2D" unique_id=575265585]
+script = ExtResource("1_a1412")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1826892858]
+position = Vector2(71.75, 52.25)
+scale = Vector2(0.39453125, 0.37109378)
 texture = ExtResource("1_tcmaw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470123763]
-position = Vector2(-0.5, -0.5)
+position = Vector2(72.25, 52.25)
 shape = SubResource("RectangleShape2D_a1412")

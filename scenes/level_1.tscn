@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://7iqij0a1lsyr" path="res://scripts/portal(fountain).gd" id="3_rus8k"]
 [ext_resource type="Script" uid="uid://top6k8f0oul8" path="res://scripts/coin.gd" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://cmpm1pby4kmyj" path="res://scenes/enemy_1.tscn" id="6_fcfvj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
 size = Vector2(128, 128)
@@ -123,6 +124,9 @@ position = Vector2(320, 16)
 shape = SubResource("CircleShape2D_rus8k")
 
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("5_4nkto")]
+
+[node name="enemy1" parent="." unique_id=575265585 instance=ExtResource("6_fcfvj")]
+position = Vector2(624, 360)
 
 [connection signal="body_entered" from="portal(fountain)" to="portal(fountain)" method="_on_body_entered"]
 [connection signal="body_entered" from="coin" to="coin" method="_on_body_entered"]
