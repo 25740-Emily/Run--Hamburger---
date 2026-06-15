@@ -16,7 +16,7 @@ func take_damage() -> void:
 		die()
 func die() -> void:
 	print("Game Over!")
-	get_tree().call_deferred("reload_current_scene")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -55,3 +55,4 @@ func _physics_process(delta):
 	if position.y > 900:
 		#repawn
 		position = start_position
+		

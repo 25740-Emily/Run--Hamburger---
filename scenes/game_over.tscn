@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ux78heg44sqo"]
+
+[sub_resource type="GDScript" id="GDScript_0nqlu"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="GameOver" type="Control" unique_id=721604833]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_0nqlu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2086607983]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1609857089]
+offset_left = 528.0
+offset_top = 288.0
+offset_right = 620.0
+offset_bottom = 328.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=832744614]
+layout_mode = 2
+text = "Game Over!"
