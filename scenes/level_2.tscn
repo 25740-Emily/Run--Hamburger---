@@ -2,9 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="1_3bmlt"]
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="2_jm1iu"]
+[ext_resource type="Script" uid="uid://dk318oexaaaq" path="res://scripts/portal(win).gd" id="3_pbc48"]
+[ext_resource type="PackedScene" uid="uid://bjf2kcgrvxvep" path="res://scenes/hamburger(player).tscn" id="4_eqxsl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm1iu"]
 size = Vector2(992, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbc48"]
+size = Vector2(136, 224)
 
 [node name="Level2" type="Node2D" unique_id=839621443]
 
@@ -22,3 +27,22 @@ position = Vector2(544, 472)
 shape = SubResource("RectangleShape2D_jm1iu")
 
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("2_jm1iu")]
+
+[node name="portal(win)" type="Area2D" parent="." unique_id=314414915]
+position = Vector2(664, 432)
+script = ExtResource("3_pbc48")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="portal(win)" unique_id=903318402]
+position = Vector2(308, 16)
+scale = Vector2(1.0625, 1.75)
+texture = ExtResource("1_3bmlt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal(win)" unique_id=439752446]
+position = Vector2(308, 16)
+shape = SubResource("RectangleShape2D_pbc48")
+
+[node name="Hamburger(player)" parent="." unique_id=455214805 instance=ExtResource("4_eqxsl")]
+position = Vector2(128, 496)
+
+[connection signal="body_entered" from="portal(win)" to="portal(win)" method="_on_body_entered"]
