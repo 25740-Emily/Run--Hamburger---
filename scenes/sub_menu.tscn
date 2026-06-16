@@ -36,3 +36,5 @@ offset_bottom = 159.0
 text = "pause"
 
 [connection signal="pressed" from="HBoxContainer/Control/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control/main menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control/Button" to="." method="_on_button_pressed"]

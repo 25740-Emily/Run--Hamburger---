@@ -29,3 +29,5 @@ offset_left = 1008.0
 offset_top = -32.0
 offset_right = 1048.0
 offset_bottom = 8.0
+
+[connection signal="gui_input" from="Home" to="Home" method="_on_gui_input"]

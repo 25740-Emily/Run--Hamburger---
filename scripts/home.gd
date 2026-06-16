@@ -10,3 +10,18 @@ func _on_homebutton_pressed() -> void:
 	else:
 		print("Warning")
 	pass # Replace with function body.
+
+@onready var sub_menu = $"../sub_menu"
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			print("Home button is pressed!")
+			trigger_pause_menu()
+	pass # Replace with function body.
+
+func trigger_pause_menu() -> void:
+	get_tree().paused = true
+	if sub_menu:
+		sub_menu.show()
