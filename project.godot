@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Run! Hamburger!!!"
-run/main_scene="uid://dwotrxjnhiot6"
+run/main_scene="uid://y37unso80avi"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
