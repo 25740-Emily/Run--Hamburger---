@@ -15,6 +15,10 @@ run/main_scene="uid://y37unso80avi"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[global_group]
+
+"bullet group"=""
+
 [input]
 
 jump={

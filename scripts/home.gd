@@ -11,7 +11,7 @@ func _on_homebutton_pressed() -> void:
 		print("Warning")
 	pass # Replace with function body.
 
-@onready var sub_menu = $"../sub_menu"
+@onready var sub_menu = $"sub menu"
 
 
 func _on_gui_input(event: InputEvent) -> void:
