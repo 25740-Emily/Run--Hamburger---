@@ -10,9 +10,8 @@ func _on_homebutton_pressed() -> void:
 	else:
 		print("Warning")
 	pass # Replace with function body.
-
-@onready var sub_menu = $"sub menu"
-
+	
+@export var sub_menu:Node2D
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
