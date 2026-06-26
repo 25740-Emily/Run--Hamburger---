@@ -11,8 +11,7 @@ size = Vector2(160, 224)
 
 [node name="enemy2" type="CharacterBody2D" unique_id=622940818]
 script = ExtResource("1_fi5i3")
-rush_speed = null
-walk_distance = null
+walk_distance = 300.0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1610856910]

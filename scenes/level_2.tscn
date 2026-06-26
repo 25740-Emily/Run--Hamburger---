@@ -47,6 +47,7 @@ shape = SubResource("RectangleShape2D_pbc48")
 position = Vector2(128, 496)
 
 [node name="enemy2" parent="." unique_id=622940818 instance=ExtResource("5_b4j7a")]
-position = Vector2(600, 232)
+position = Vector2(605, 491)
+walk_distance = 450.0
 
 [connection signal="body_entered" from="portal(win)" to="portal(win)" method="_on_body_entered"]
