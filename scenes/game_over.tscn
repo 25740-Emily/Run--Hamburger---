@@ -1,13 +1,6 @@
 [gd_scene format=3 uid="uid://ux78heg44sqo"]
 
-[sub_resource type="GDScript" id="GDScript_0nqlu"]
-script/source = "extends Control
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-"
+[ext_resource type="Script" uid="uid://dw355m8411rl1" path="res://scripts/new_gd_script.gd" id="1_xeevv"]
 
 [node name="GameOver" type="Control" unique_id=721604833]
 layout_mode = 3
@@ -18,7 +11,7 @@ offset_top = 8.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_0nqlu")
+script = ExtResource("1_xeevv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2086607983]
 
@@ -37,3 +30,13 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 40
 text = "Game Over!"
+
+[node name="Button" type="Button" parent="." unique_id=1340961499]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 360.0
+offset_right = 633.0
+offset_bottom = 391.0
+text = "main menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

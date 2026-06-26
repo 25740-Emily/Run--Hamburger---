@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dtlwcjp1gjtep"]
 
+[ext_resource type="Script" uid="uid://ibby84x6sqrs" path="res://scripts/win.gd" id="1_r4oei"]
+
 [node name="Win" type="Control" unique_id=1690831233]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_r4oei")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010978411]
 
@@ -27,3 +30,12 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "YOU WIN!"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=831073811]
+offset_left = 528.0
+offset_top = 368.0
+offset_right = 625.0
+offset_bottom = 399.0
+text = "main menu"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

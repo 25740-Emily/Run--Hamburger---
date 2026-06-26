@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="2_jm1iu"]
 [ext_resource type="Script" uid="uid://dk318oexaaaq" path="res://scripts/portal(win).gd" id="3_pbc48"]
 [ext_resource type="PackedScene" uid="uid://bjf2kcgrvxvep" path="res://scenes/hamburger(player).tscn" id="4_eqxsl"]
+[ext_resource type="PackedScene" uid="uid://jrcvy4hwx0ir" path="res://scenes/enemy_2.tscn" id="5_b4j7a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm1iu"]
 size = Vector2(1152, 16)
@@ -44,5 +45,8 @@ shape = SubResource("RectangleShape2D_pbc48")
 
 [node name="Hamburger(player)" parent="." unique_id=455214805 instance=ExtResource("4_eqxsl")]
 position = Vector2(128, 496)
+
+[node name="enemy2" parent="." unique_id=622940818 instance=ExtResource("5_b4j7a")]
+position = Vector2(600, 232)
 
 [connection signal="body_entered" from="portal(win)" to="portal(win)" method="_on_body_entered"]
