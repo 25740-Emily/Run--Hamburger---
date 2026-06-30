@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="1_3bmlt"]
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="2_jm1iu"]
 [ext_resource type="Script" uid="uid://dk318oexaaaq" path="res://scripts/portal(win).gd" id="3_pbc48"]
-[ext_resource type="PackedScene" uid="uid://bjf2kcgrvxvep" path="res://scenes/hamburger(player).tscn" id="4_eqxsl"]
 [ext_resource type="PackedScene" uid="uid://jrcvy4hwx0ir" path="res://scenes/enemy_2.tscn" id="5_b4j7a"]
+[ext_resource type="PackedScene" uid="uid://c31mchehhg4ub" path="res://scenes/player_2.tscn" id="5_wo48x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm1iu"]
 size = Vector2(1152, 16)
@@ -43,11 +43,11 @@ texture = ExtResource("1_3bmlt")
 position = Vector2(308, 16)
 shape = SubResource("RectangleShape2D_pbc48")
 
-[node name="Hamburger(player)" parent="." unique_id=455214805 instance=ExtResource("4_eqxsl")]
-position = Vector2(128, 496)
-
 [node name="enemy2" parent="." unique_id=622940818 instance=ExtResource("5_b4j7a")]
 position = Vector2(605, 491)
 walk_distance = 450.0
+
+[node name="player2" parent="." unique_id=1255180634 instance=ExtResource("5_wo48x")]
+position = Vector2(159, 408)
 
 [connection signal="body_entered" from="portal(win)" to="portal(win)" method="_on_body_entered"]
