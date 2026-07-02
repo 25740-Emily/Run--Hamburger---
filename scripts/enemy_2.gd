@@ -41,6 +41,6 @@ func _on_detect_area_body_entered(body: Node2D) -> void:
 # 💥 2. 这个是怪物自带的伤害区域（比如叫 DamageArea），用来让玩家掉血的信号
 # ⚠️ 确保这个名字和你左侧场景树里那个用来咬玩家的 Area2D 节点的信号名字一致
 func _on_damagearea_body_entered(body: Node2D) -> void:
-	if body.name == "Hamburger(player)":
+	if body.name == "player2":
 		if body.has_method("take_damage"):
 			body.take_damage()
