@@ -34,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 # 🎯 这个就是刚连过来的 DetectArea 信号
 # 🎯 1. 这个是负责感应玩家走过来、触发怪物冲天而起的信号
 func _on_detect_area_body_entered(body: Node2D) -> void:
-	if not is_triggered and body.name == "Hamburger(player)":
+	if not is_triggered and body.name == "player2":
 		is_triggered = true
 		start_y = global_position.y
 

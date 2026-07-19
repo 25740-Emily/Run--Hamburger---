@@ -6,26 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://jrcvy4hwx0ir" path="res://scenes/enemy_2.tscn" id="5_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://c31mchehhg4ub" path="res://scenes/player_2.tscn" id="5_wo48x"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm1iu"]
-size = Vector2(1152, 16)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbc48"]
 size = Vector2(136, 224)
 
 [node name="Level2" type="Node2D" unique_id=839621443]
-
-[node name="platform" type="StaticBody2D" parent="." unique_id=1460867579]
-position = Vector2(0, 96)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=68826330]
-position = Vector2(464.00003, 472)
-scale = Vector2(9, 0.125)
-texture = ExtResource("1_3bmlt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=93150237]
-position = Vector2(464, 472)
-shape = SubResource("RectangleShape2D_jm1iu")
 
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("2_jm1iu")]
 
