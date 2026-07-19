@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oc1kf"]
 size = Vector2(157, 168)
 
-[node name="player2" type="Area2D" unique_id=1255180634]
+[node name="player2" type="CharacterBody2D" unique_id=617637370]
 script = ExtResource("1_s551d")
 metadata/_edit_group_ = true
 
