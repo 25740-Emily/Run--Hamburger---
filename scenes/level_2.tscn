@@ -14,7 +14,7 @@ size = Vector2(136, 224)
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("2_jm1iu")]
 
 [node name="portal(win)" type="Area2D" parent="." unique_id=314414915]
-position = Vector2(664, 432)
+position = Vector2(1234, 455)
 script = ExtResource("3_pbc48")
 metadata/_edit_group_ = true
 
