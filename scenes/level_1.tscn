@@ -29,6 +29,7 @@ radius = 32.0
 
 [node name="Hamburger(player)" parent="." unique_id=455214805 instance=ExtResource("1_fcfvj")]
 position = Vector2(-32, 296)
+scale = Vector2(0.75, 0.75)
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=2127297013]
 position = Vector2(-89.420105, 482.654)
