@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e40yrq4gkcg3"
-path="res://.godot/imported/octopus.png-c35032d1ea0d5f571c009b2f92afde6e.ctex"
+path="res://.godot/imported/octopus.png-105774fcb0f5999d196ec90897388990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/octopus.png"
-dest_files=["res://.godot/imported/octopus.png-c35032d1ea0d5f571c009b2f92afde6e.ctex"]
+source_file="res://octopus.png"
+dest_files=["res://.godot/imported/octopus.png-105774fcb0f5999d196ec90897388990.ctex"]
 
 [params]
 
