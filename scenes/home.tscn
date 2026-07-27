@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvya3ydk5sruv"]
 
-[ext_resource type="Texture2D" uid="uid://dg6bjc8t7rytx" path="res://home-icon_14316388.png" id="1_krot7"]
+[ext_resource type="Texture2D" uid="uid://dg6bjc8t7rytx" path="res://art/home-icon_14316388.png" id="1_krot7"]
 [ext_resource type="Script" uid="uid://tlfjywk7ed11" path="res://scripts/home.gd" id="1_u4wd2"]
 
 [node name="Home" type="Control" unique_id=1328583996]

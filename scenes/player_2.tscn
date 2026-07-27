@@ -2,19 +2,42 @@
 
 [ext_resource type="Script" uid="uid://7pa40ssoalmb" path="res://scripts/player_2.gd" id="1_s551d"]
 [ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="2_yjax8"]
+[ext_resource type="Texture2D" uid="uid://btfluja5uysdj" path="res://art/hamburger with eyes (1).png" id="3_yjax8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oc1kf"]
-size = Vector2(157, 168)
+size = Vector2(119, 109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc1kf"]
+atlas = ExtResource("3_yjax8")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0mr0g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc1kf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="player2" type="CharacterBody2D" unique_id=617637370]
 script = ExtResource("1_s551d")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1682578332]
+visible = false
 position = Vector2(-72, -70)
 scale = Vector2(1.203125, 1.3125)
 texture = ExtResource("2_yjax8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=653232003]
-position = Vector2(-72.5, -70)
+position = Vector2(-67.5, -64.5)
 shape = SubResource("RectangleShape2D_oc1kf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=401334521]
+position = Vector2(-67.000015, -63.000008)
+scale = Vector2(0.234375, 0.2109375)
+sprite_frames = SubResource("SpriteFrames_0mr0g")
+autoplay = "default"

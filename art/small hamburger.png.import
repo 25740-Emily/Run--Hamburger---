@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e40yrq4gkcg3"
-path="res://.godot/imported/octopus.png-105774fcb0f5999d196ec90897388990.ctex"
+uid="uid://cubx5ideo4f13"
+path="res://.godot/imported/small hamburger.png-cebfee8d7bfbe71a6e8bd29fda2fa81a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://octopus.png"
-dest_files=["res://.godot/imported/octopus.png-105774fcb0f5999d196ec90897388990.ctex"]
+source_file="res://art/small hamburger.png"
+dest_files=["res://.godot/imported/small hamburger.png-cebfee8d7bfbe71a6e8bd29fda2fa81a.ctex"]
 
 [params]
 

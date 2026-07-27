@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ejilljprrc2l"
-path="res://.godot/imported/heart.png-46ac0108226a8969f121b451c7b38c9b.ctex"
+uid="uid://e40yrq4gkcg3"
+path="res://.godot/imported/octopus.png-e4d0cb0b25cb1319749e4ad4e8a48db3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://heart.png"
-dest_files=["res://.godot/imported/heart.png-46ac0108226a8969f121b451c7b38c9b.ctex"]
+source_file="res://art/octopus.png"
+dest_files=["res://.godot/imported/octopus.png-e4d0cb0b25cb1319749e4ad4e8a48db3.ctex"]
 
 [params]
 
