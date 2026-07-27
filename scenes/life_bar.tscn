@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cesawnjdbwvtt"]
 
 [ext_resource type="Script" uid="uid://3bb3v1asj67s" path="res://scripts/life_bar.gd" id="1_nkuye"]
-[ext_resource type="Texture2D" uid="uid://ejilljprrc2l" path="res://heart.png" id="2_nkuye"]
+[ext_resource type="Texture2D" uid="uid://bfja84hhr6dcy" path="res://32small.png" id="2_nkuye"]
 
 [node name="life bar" type="HBoxContainer" unique_id=551103358]
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 174.0
-offset_bottom = 40.0
+offset_right = 270.0
+offset_bottom = 136.0
 theme_override_constants/separation = 35
 script = ExtResource("1_nkuye")
 

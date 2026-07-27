@@ -15,9 +15,9 @@ offset_bottom = 56.0
 
 [node name="life bar" parent="." unique_id=551103358 instance=ExtResource("2_6syxi")]
 unique_name_in_owner = true
-offset_left = 512.0
+offset_left = 442.0
 offset_top = 16.0
-offset_right = 966.0
+offset_right = 960.0
 offset_bottom = 144.0
 
 [node name="Score" parent="." unique_id=981005857 instance=ExtResource("3_6gmgv")]
