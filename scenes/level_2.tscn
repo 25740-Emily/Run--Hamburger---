@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d4lcukx757kgo"]
 
+[ext_resource type="Texture2D" uid="uid://ct30r1a6pbo7d" path="res://art/sketch1785241774267.png" id="1_wo48x"]
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="2_jm1iu"]
 [ext_resource type="Texture2D" uid="uid://c4cnyog35pdqd" path="res://art/portal(win).png" id="3_b4j7a"]
 [ext_resource type="Script" uid="uid://dk318oexaaaq" path="res://scripts/portal(win).gd" id="3_pbc48"]
@@ -10,6 +11,15 @@
 size = Vector2(202, 204)
 
 [node name="Level2" type="Node2D" unique_id=839621443]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=109643560]
+repeat_size = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1848913423]
+position = Vector2(-570, -154)
+scale = Vector2(0.726953, 0.644375)
+texture = ExtResource("1_wo48x")
+centered = false
 
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("2_jm1iu")]
 
