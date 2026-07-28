@@ -6,12 +6,13 @@
 [ext_resource type="Script" uid="uid://top6k8f0oul8" path="res://scripts/coin.gd" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://cmpm1pby4kmyj" path="res://scenes/enemy_1.tscn" id="6_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://dhe3sdngea5by" path="res://art/lemon.png" id="7_pa8r4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
 size = Vector2(306.4201, 32.654022)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bswci"]
-size = Vector2(568, 24)
+size = Vector2(89, 133)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nkto"]
 size = Vector2(272, 26)
@@ -32,7 +33,7 @@ position = Vector2(-32, 296)
 scale = Vector2(0.75, 0.75)
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=2127297013]
-position = Vector2(-89.420105, 482.654)
+position = Vector2(-93, 389)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform1" unique_id=1950354608]
@@ -45,20 +46,20 @@ position = Vector2(97.21005, 55.673035)
 shape = SubResource("RectangleShape2D_rus8k")
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=797389595]
-position = Vector2(16, 0)
+position = Vector2(99, -227)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=1868865421]
-position = Vector2(604, 452)
-scale = Vector2(4.4375, 0.1875)
-texture = ExtResource("2_rus8k")
+position = Vector2(375.00003, 515.7969)
+scale = Vector2(0.85937506, 0.9166071)
+texture = ExtResource("7_pa8r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=934837836]
-position = Vector2(604, 452)
+position = Vector2(375.5, 516.5)
 shape = SubResource("RectangleShape2D_bswci")
 
 [node name="platform3" type="StaticBody2D" parent="." unique_id=502703560]
-position = Vector2(744, 312)
+position = Vector2(-50, -80)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="platform3" unique_id=832827425]
@@ -71,7 +72,7 @@ position = Vector2(456, 453)
 shape = SubResource("RectangleShape2D_4nkto")
 
 [node name="platform4" type="StaticBody2D" parent="." unique_id=593866208]
-position = Vector2(1472, 576)
+position = Vector2(602, 466)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="platform4" unique_id=2106159998]
@@ -84,7 +85,7 @@ position = Vector2(261.5, 75.5)
 shape = SubResource("RectangleShape2D_fcfvj")
 
 [node name="portal(fountain)" type="Area2D" parent="." unique_id=1809142837]
-position = Vector2(2008, 520)
+position = Vector2(1312, 382)
 script = ExtResource("3_rus8k")
 metadata/_edit_group_ = true
 
@@ -114,7 +115,7 @@ shape = SubResource("CircleShape2D_rus8k")
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("5_4nkto")]
 
 [node name="enemy1" parent="." unique_id=575265585 instance=ExtResource("6_fcfvj")]
-position = Vector2(624, 360)
+position = Vector2(915, 449)
 
 [connection signal="body_entered" from="portal(fountain)" to="portal(fountain)" method="_on_body_entered"]
 [connection signal="body_entered" from="coin" to="coin" method="_on_body_entered"]
