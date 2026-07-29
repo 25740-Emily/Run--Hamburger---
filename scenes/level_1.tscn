@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://7iqij0a1lsyr" path="res://scripts/portal(fountain).gd" id="3_rus8k"]
 [ext_resource type="Script" uid="uid://top6k8f0oul8" path="res://scripts/coin.gd" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="5_4nkto"]
+[ext_resource type="Texture2D" uid="uid://4aujt88lw4lj" path="res://art/coin.png" id="6_15mv3"]
 [ext_resource type="PackedScene" uid="uid://cmpm1pby4kmyj" path="res://scenes/enemy_1.tscn" id="6_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://dhe3sdngea5by" path="res://art/lemon.png" id="7_pa8r4"]
 
@@ -24,7 +25,50 @@ size = Vector2(439, 25)
 size = Vector2(144, 200)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rus8k"]
-radius = 32.0
+radius = 29.068884
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3sih"]
+atlas = ExtResource("6_15mv3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2y5yt"]
+atlas = ExtResource("6_15mv3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2os1m"]
+atlas = ExtResource("6_15mv3")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go7sj"]
+atlas = ExtResource("6_15mv3")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gny6"]
+atlas = ExtResource("6_15mv3")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2aecg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3sih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2y5yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2os1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go7sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gny6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="level1" type="Node2D" unique_id=718702925]
 
@@ -99,18 +143,25 @@ position = Vector2(8, 20)
 shape = SubResource("RectangleShape2D_pa8r4")
 
 [node name="coin" type="Area2D" parent="." unique_id=1451462865]
-position = Vector2(-80, 216)
+position = Vector2(-131, 184)
 script = ExtResource("4_5xbjy")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="coin" unique_id=628821141]
+visible = false
 position = Vector2(322, 17.999998)
 scale = Vector2(0.34375015, 0.34375)
 texture = ExtResource("2_rus8k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coin" unique_id=1516728115]
-position = Vector2(320, 16)
+position = Vector2(321, 20)
 shape = SubResource("CircleShape2D_rus8k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="coin" unique_id=1744362044]
+position = Vector2(322.125, 21.000004)
+scale = Vector2(2.0703118, 2.25)
+sprite_frames = SubResource("SpriteFrames_2aecg")
+autoplay = "default"
 
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("5_4nkto")]
 
