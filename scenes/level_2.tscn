@@ -17,14 +17,14 @@ repeat_size = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1848913423]
 position = Vector2(-528.99994, -10.999999)
-scale = Vector2(0.96979165, 0.8046296)
+scale = Vector2(0.9526042, 1.2092593)
 texture = ExtResource("1_wo48x")
 centered = false
 
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("2_jm1iu")]
 
 [node name="portal(win)" type="Area2D" parent="." unique_id=314414915]
-position = Vector2(1234, 455)
+position = Vector2(1353, 780)
 script = ExtResource("3_pbc48")
 metadata/_edit_group_ = true
 
@@ -38,12 +38,12 @@ position = Vector2(272, 6)
 shape = SubResource("RectangleShape2D_pbc48")
 
 [node name="enemy2" parent="." unique_id=622940818 instance=ExtResource("5_b4j7a")]
-position = Vector2(605, 491)
+position = Vector2(1066, 969)
 walk_distance = 450.0
 
 [node name="player2" parent="." unique_id=1255180634 instance=ExtResource("5_wo48x")]
-position = Vector2(59, 540)
+position = Vector2(132, 893)
 
-[node name="Camera2D" type="Camera2D" parent="player2" unique_id=1855056474]
+[node name="Camera2D" type="Camera2D" parent="player2" unique_id=989198715]
 
 [connection signal="body_entered" from="portal(win)" to="portal(win)" method="_on_body_entered"]
