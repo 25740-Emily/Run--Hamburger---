@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dwotrxjnhiot6"]
+[gd_scene format=4 uid="uid://dwotrxjnhiot6"]
 
 [ext_resource type="PackedScene" uid="uid://bjf2kcgrvxvep" path="res://scenes/hamburger(player).tscn" id="1_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="2_rus8k"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://4aujt88lw4lj" path="res://art/coin.png" id="6_15mv3"]
 [ext_resource type="PackedScene" uid="uid://cmpm1pby4kmyj" path="res://scenes/enemy_1.tscn" id="6_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://dhe3sdngea5by" path="res://art/lemon.png" id="7_pa8r4"]
+[ext_resource type="Texture2D" uid="uid://cgelan4wa4jub" path="res://art/New Piskel (4).png" id="9_e3sih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
 size = Vector2(306.4201, 32.654022)
@@ -69,6 +70,17 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2y5yt"]
+texture = ExtResource("9_e3sih")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_2os1m"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_2y5yt")
 
 [node name="level1" type="Node2D" unique_id=718702925]
 
@@ -167,6 +179,10 @@ autoplay = "default"
 
 [node name="enemy1" parent="." unique_id=575265585 instance=ExtResource("6_fcfvj")]
 position = Vector2(915, 449)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1734806045]
+tile_map_data = PackedByteArray("AAD4/xsAAAAAAAEAAAD5/xsAAAAAAAEAAAD6/xsAAAAAAAEAAAD7/xsAAAAAAAEAAAD8/xsAAAAAAAEAAAD9/xsAAAAAAAEAAAD+/xsAAAAAAAEAAAD//xsAAAAAAAEAAAAAABsAAAAAAAEAAAABABsAAAAAAAEAAAACABsAAAAAAAEAAAADABsAAAAAAAEAAAAEABsAAAAAAAEAAAAEABoAAAAAAAEAAAAFABoAAAAAAAEAAAAGABoAAAAAAAEAAAAHABoAAAAAAAEAAAAIABoAAAAAAAEAAAAJABoAAAAAAAEAAAAJABsAAAAAAAEAAAAJABwAAAAAAAEAAAAIABwAAAAAAAEAAAAHABwAAAAAAAEAAAAGABwAAAAAAAEAAAAFABwAAAAAAAEAAAAEABwAAAAAAAEAAAADABwAAAAAAAEAAAACABwAAAAAAAEAAAABABwAAAAAAAEAAAAAABwAAAAAAAEAAAD//xwAAAAAAAEAAAD+/xwAAAAAAAEAAAD9/xwAAAAAAAEAAAD8/xwAAAAAAAEAAAD7/xwAAAAAAAEAAAD6/xwAAAAAAAEAAAD5/xwAAAAAAAEAAAD4/xwAAAAAAAEAAAAFABsAAAAAAAEAAAAGABsAAAAAAAEAAAAHABsAAAAAAAEAAAAIABsAAAAAAAEAAAADABoAAAAAAAEAAAACABoAAAAAAAEAAAABABoAAAAAAAEAAAAAABoAAAAAAAEAAAD//xoAAAAAAAEAAAD+/xoAAAAAAAEAAAD9/xoAAAAAAAEAAAD8/xoAAAAAAAEAAAD7/xoAAAAAAAEAAAD6/xoAAAAAAAEAAAD5/xoAAAAAAAEAAAD4/xoAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_2os1m")
 
 [connection signal="body_entered" from="portal(fountain)" to="portal(fountain)" method="_on_body_entered"]
 [connection signal="body_entered" from="coin" to="coin" method="_on_body_entered"]
