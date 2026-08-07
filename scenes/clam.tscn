@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bu7l7efnces4f"]
+
+[ext_resource type="Script" uid="uid://7va0appxkac1" path="res://scripts/clam.gd" id="1_2ffwd"]
+[ext_resource type="Texture2D" uid="uid://drp1vfv24c1rs" path="res://art/Clam.png" id="1_r2sgo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ffwd"]
+atlas = ExtResource("1_r2sgo")
+region = Rect2(0, 117, 128, 117)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o84wg"]
+atlas = ExtResource("1_r2sgo")
+region = Rect2(0, 0, 128, 117)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_131hw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ffwd")
+}],
+"loop": true,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o84wg")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dbc73"]
+radius = 62.008064
+
+[node name="clam" type="Area2D" unique_id=801750930]
+script = ExtResource("1_2ffwd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=224191959]
+sprite_frames = SubResource("SpriteFrames_131hw")
+animation = &"open"
+autoplay = "open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1020595660]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_dbc73")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
