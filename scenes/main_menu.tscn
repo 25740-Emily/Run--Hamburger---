@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://osld5msbqwkb" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://cv6m3d1xvmkuq" path="res://art/mainmeun background.jpg" id="2_ekxnf"]
 
-[node name="main menu" type="Node2D" unique_id=684897392]
+[node name="main menu" type="CanvasLayer" unique_id=202036671]
 script = ExtResource("1_l6cm7")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1985571461]
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=281167332]
-position = Vector2(583.00006, 320)
+position = Vector2(572.00006, 323)
 scale = Vector2(0.85293037, 0.69501466)
 texture = ExtResource("2_ekxnf")
 
@@ -23,18 +23,18 @@ offset_bottom = -128.0
 
 [node name="Start" type="Button" parent="Buttton manager" unique_id=784182287]
 layout_mode = 0
-offset_left = 366.0
+offset_left = 348.0
 offset_top = 836.0
-offset_right = 536.0
+offset_right = 518.0
 offset_bottom = 907.0
 text = "Start"
 
 [node name="Quit" type="Button" parent="Buttton manager" unique_id=384755198]
 layout_mode = 0
-offset_left = 362.0
-offset_top = 950.0
-offset_right = 534.0
-offset_bottom = 1023.0
+offset_left = 346.0
+offset_top = 948.0
+offset_right = 518.0
+offset_bottom = 1021.0
 text = "Quit"
 
 [connection signal="pressed" from="Buttton manager/Start" to="." method="_on_start_pressed"]
