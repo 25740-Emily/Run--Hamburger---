@@ -53,6 +53,7 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=943426130]
 position = Vector2(-2, 5.5)
 shape = SubResource("RectangleShape2D_fi5i3")
+disabled = true
 
 [node name="DetectArea" type="Area2D" parent="." unique_id=1165112562]
 
