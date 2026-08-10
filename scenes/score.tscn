@@ -1,6 +1,51 @@
 [gd_scene format=3 uid="uid://bxcwqb52fw3q8"]
 
 [ext_resource type="Texture2D" uid="uid://bs804sp83fymv" path="res://icon.svg" id="1_8juob"]
+[ext_resource type="Script" uid="uid://bd78m38edt18m" path="res://scripts/label.gd" id="1_plgac"]
+[ext_resource type="Texture2D" uid="uid://4aujt88lw4lj" path="res://art/coin.png" id="2_bak1h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plgac"]
+atlas = ExtResource("2_bak1h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lew60"]
+atlas = ExtResource("2_bak1h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68bkv"]
+atlas = ExtResource("2_bak1h")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcjqx"]
+atlas = ExtResource("2_bak1h")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eqfp"]
+atlas = ExtResource("2_bak1h")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x4ir2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plgac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lew60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68bkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcjqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eqfp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Score" type="Control" unique_id=981005857]
 layout_mode = 3
@@ -10,14 +55,22 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="." unique_id=692230039]
 layout_mode = 0
-offset_left = 120.0
-offset_top = -32.0
-offset_right = 157.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 64
+offset_left = 81.0
+offset_top = 3.0
+offset_right = 101.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 35
 text = "0"
+script = ExtResource("1_plgac")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1981285884]
+visible = false
 position = Vector2(56, 16)
 scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("1_8juob")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=833201979]
+position = Vector2(46, 29.499998)
+scale = Vector2(1.6249998, 1.71875)
+sprite_frames = SubResource("SpriteFrames_x4ir2")
+autoplay = "default"

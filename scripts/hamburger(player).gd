@@ -8,15 +8,28 @@ func _ready() -> void:
 		life_bar.update_lives(current_lives)
 		
 func take_damage() -> void:
+	Global.current_health -= 1
+	print("玩家受伤！当前剩余生命:", Global.current_health)
 	current_lives -= 1
 	if life_bar:
 		life_bar.update_lives(current_lives)
 		
+	var tween = create_tween()
+	modulate = Color.RED
+	tween.tween_property(self, "modulate", Color.WHITE, 0.2)
+	
+	# 检查是否死亡
+	if Global.current_health <= 0:
+		die()
+	
+	
 	if current_lives <= 0:
 		die()
 func die() -> void:
 	print("Game Over!")
+	Global.reset_health() # 重新开始时把血量恢复满
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
+
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0

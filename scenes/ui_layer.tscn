@@ -21,13 +21,15 @@ offset_right = 960.0
 offset_bottom = 144.0
 
 [node name="Score" parent="." unique_id=981005857 instance=ExtResource("3_6gmgv")]
-offset_top = 64.0
-offset_bottom = 104.0
+offset_left = 5.0
+offset_top = 46.0
+offset_right = 119.0
+offset_bottom = 99.0
 
 [node name="Home" parent="." unique_id=1328583996 instance=ExtResource("4_6syxi")]
-offset_left = 1008.0
-offset_top = -32.0
-offset_right = 1048.0
-offset_bottom = 8.0
+offset_left = 998.0
+offset_top = -30.0
+offset_right = 1126.0
+offset_bottom = 99.0
 
 [connection signal="gui_input" from="Home" to="Home" method="_on_gui_input"]
