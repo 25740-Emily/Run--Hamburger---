@@ -10,7 +10,7 @@ func _ready() -> void:
 func take_damage() -> void:
 	# 扣除全局血量
 	Global.current_health -= 1
-	print("玩家受伤！当前剩余生命:", Global.current_health)
+	print("Player took damage！Current lives:", Global.current_health)
 	
 	# 受伤闪红效果
 	var tween = create_tween()
@@ -23,7 +23,7 @@ func take_damage() -> void:
 
 # ☠️ 死亡处理
 func die() -> void:
-	print("玩家死亡，重新开始关卡！")
+	print("Player dead，restart！")
 	Global.reset_health() # 重新开始时恢复满血
 	# 💡 使用 call_deferred 延迟调用重载场景，避免物理回调冲突
 	get_tree().call_deferred("reload_current_scene")
