@@ -30,7 +30,7 @@ func die() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("player_down") and position.y < 962:
+	if Input.is_action_pressed("player_down") and position.y < 870:
 		position.y += 10
 	if Input.is_action_pressed("player_up") and position.y > 324:
 		position.y -= 10
