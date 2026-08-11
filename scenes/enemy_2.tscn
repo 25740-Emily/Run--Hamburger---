@@ -43,6 +43,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4ywr"]
+size = Vector2(198.5, 192.5)
+
 [node name="enemy2" type="CharacterBody2D" unique_id=622940818]
 script = ExtResource("1_fi5i3")
 walk_distance = 300.0
@@ -67,4 +70,11 @@ scale = Vector2(0.40039063, 0.38867188)
 sprite_frames = SubResource("SpriteFrames_fdqbe")
 autoplay = "default"
 
+[node name="damagearea" type="Area2D" parent="." unique_id=846925489]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damagearea" unique_id=1448539899]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_a4ywr")
+
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
+[connection signal="body_entered" from="damagearea" to="." method="_on_damagearea_body_entered"]
