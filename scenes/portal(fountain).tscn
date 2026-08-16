@@ -56,4 +56,14 @@ scale = Vector2(0.9609375, 0.95987654)
 sprite_frames = SubResource("SpriteFrames_vl3bg")
 autoplay = "default"
 
+[node name="GuideLabel" type="Label" parent="." unique_id=1807309425]
+offset_left = 69.0
+offset_top = -210.0
+offset_right = 206.0
+offset_bottom = -147.0
+theme_override_colors/font_color = Color(0.9999998, 0.23605832, 0.15462574, 1)
+theme_override_font_sizes/font_size = 21
+text = "Jump Inside!!!
+          ↙"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
