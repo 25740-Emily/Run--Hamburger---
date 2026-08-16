@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://jrcvy4hwx0ir" path="res://scenes/enemy_2.tscn" id="5_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://c31mchehhg4ub" path="res://scenes/player_2.tscn" id="5_wo48x"]
 [ext_resource type="PackedScene" uid="uid://bu7l7efnces4f" path="res://scenes/clam.tscn" id="7_y0kc7"]
+[ext_resource type="PackedScene" uid="uid://b26rcf8mc25ht" path="res://scenes/coin.tscn" id="8_ne2mo"]
+[ext_resource type="PackedScene" uid="uid://dk5x40pto4lfs" path="res://scenes/shark.tscn" id="9_6cvei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbc48"]
 size = Vector2(202, 204)
@@ -25,7 +27,7 @@ centered = false
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("2_jm1iu")]
 
 [node name="portal(win)" type="Area2D" parent="." unique_id=314414915]
-position = Vector2(2109, 381)
+position = Vector2(3121, 300)
 script = ExtResource("3_pbc48")
 metadata/_edit_group_ = true
 
@@ -43,11 +45,18 @@ position = Vector2(556, 469)
 walk_distance = 450.0
 
 [node name="clam" parent="." unique_id=801750930 instance=ExtResource("7_y0kc7")]
-position = Vector2(1439, 582)
+position = Vector2(1422, 561)
 
 [node name="player2" parent="." unique_id=1255180634 instance=ExtResource("5_wo48x")]
 position = Vector2(75, 575)
 
 [node name="Camera2D" type="Camera2D" parent="player2" unique_id=989198715]
+
+[node name="coin" parent="." unique_id=413105068 instance=ExtResource("8_ne2mo")]
+position = Vector2(844, 504)
+
+[node name="shark" parent="." unique_id=1399314910 instance=ExtResource("9_6cvei")]
+position = Vector2(1939, 344)
+swim_distance = 800.0
 
 [connection signal="body_entered" from="portal(win)" to="portal(win)" method="_on_body_entered"]

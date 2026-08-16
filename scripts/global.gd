@@ -14,3 +14,4 @@ var score: int = 0
 func reset_game() -> void:
 	current_health = max_health
 	score = 0 # 重置分数
+	

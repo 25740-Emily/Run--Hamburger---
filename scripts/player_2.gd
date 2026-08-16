@@ -26,7 +26,7 @@ func die() -> void:
 	print("Player dead，restart！")
 	Global.reset_health() # 重新开始时恢复满血
 	# 💡 使用 call_deferred 延迟调用重载场景，避免物理回调冲突
-	get_tree().call_deferred("reload_current_scene")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

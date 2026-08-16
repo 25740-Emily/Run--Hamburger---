@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dk5x40pto4lfs"]
+
+[ext_resource type="Script" uid="uid://rykx8trfwiui" path="res://scripts/shark.gd" id="1_v5iaq"]
+[ext_resource type="Texture2D" uid="uid://crljmxfikcrmt" path="res://art/shark copy.png" id="2_po4rd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inbs7"]
+size = Vector2(249, 111)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f40hg"]
+radius = 71.38628
+
+[node name="shark" type="CharacterBody2D" unique_id=1399314910]
+script = ExtResource("1_v5iaq")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1098483522]
+position = Vector2(27, -6)
+texture = ExtResource("2_po4rd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1322591794]
+position = Vector2(-18, -9)
+shape = SubResource("RectangleShape2D_inbs7")
+disabled = true
+
+[node name="damageare" type="Area2D" parent="." unique_id=1430202278]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damageare" unique_id=250520636]
+position = Vector2(-70, 0)
+shape = SubResource("CircleShape2D_f40hg")
+
+[connection signal="body_entered" from="damageare" to="." method="_on_damageare_body_entered"]

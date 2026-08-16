@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://4aujt88lw4lj" path="res://art/coin.png" id="3_1ikuy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rus8k"]
-radius = 29.068884
+radius = 23.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3sih"]
 atlas = ExtResource("3_1ikuy")
@@ -65,8 +65,8 @@ position = Vector2(321, 20)
 shape = SubResource("CircleShape2D_rus8k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1216831828]
-position = Vector2(322.125, 21.000004)
-scale = Vector2(2.0703118, 2.25)
+position = Vector2(321.00003, 20.000002)
+scale = Vector2(1.7499994, 1.8437496)
 sprite_frames = SubResource("SpriteFrames_2aecg")
 autoplay = "default"
 

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bngsbkow554rh"]
+
+[ext_resource type="Script" uid="uid://t8ga2i460so" path="res://scripts/can.gd" id="1_py3wg"]
+[ext_resource type="Texture2D" uid="uid://cwbfjnnprecbg" path="res://art/can.png" id="2_py3wg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e72jk"]
+size = Vector2(35, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgna5"]
+size = Vector2(80.5, 421)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khftl"]
+size = Vector2(29, 41)
+
+[node name="can" type="CharacterBody2D" unique_id=265648014]
+script = ExtResource("1_py3wg")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1905240482]
+position = Vector2(-42.34375, 25.625)
+scale = Vector2(0.3519965, 0.35243052)
+texture = ExtResource("2_py3wg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1489854043]
+position = Vector2(-43.5, 25)
+shape = SubResource("RectangleShape2D_e72jk")
+disabled = true
+
+[node name="DetectArea" type="Area2D" parent="." unique_id=1495882157]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=383515970]
+position = Vector2(-34.25, 207.5)
+shape = SubResource("RectangleShape2D_wgna5")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=283417073]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1475279391]
+position = Vector2(-42.5, 26.5)
+shape = SubResource("RectangleShape2D_khftl")
+
+[connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
+[connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]
