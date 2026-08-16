@@ -49,7 +49,7 @@ position = Vector2(637, 642)
 shape = SubResource("RectangleShape2D_e3sih")
 
 [node name="Hamburger(player)" parent="." unique_id=455214805 instance=ExtResource("1_fcfvj")]
-position = Vector2(656, 302)
+position = Vector2(-579, 177)
 scale = Vector2(0.75, 0.75)
 
 [node name="lemon" type="StaticBody2D" parent="." unique_id=797389595]
