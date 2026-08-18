@@ -32,7 +32,7 @@ func die() -> void:
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var jump_velocity: float = -400.0
 var start_position = Vector2(-32,296)
 
 @export var MAX_JUMPS = 2
@@ -51,7 +51,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor() or jump_count < MAX_JUMPS:
-			velocity.y = JUMP_VELOCITY
+			velocity.y = jump_velocity
 			jump_count += 1
 
 	# Get the input direction and handle the movement/deceleration.
@@ -69,3 +69,20 @@ func _physics_process(delta):
 		#repawn
 		position = start_position
 		
+# 🧪 变大并跳得更高的函数
+func grow_big(duration: float = 5.0) -> void:
+	# 1. 提升跳跃高度（数值越负跳得越高，乘以 1.4 倍）
+	var default_jump = jump_velocity
+	jump_velocity = default_jump * 1.4
+
+	# 2. 放大角色体型
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(1.5, 1.5), 0.2)
+	
+	# 3. 等待持续时间结束
+	await get_tree().create_timer(duration).timeout
+	
+	# 4. 恢复原本的跳跃高度与体型
+	jump_velocity = default_jump
+	var shrink_tween = create_tween()
+	shrink_tween.tween_property(self, "scale", Vector2.ONE, 0.2)

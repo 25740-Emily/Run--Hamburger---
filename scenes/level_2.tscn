@@ -27,9 +27,8 @@ centered = false
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("2_jm1iu")]
 
 [node name="portal(win)" type="Area2D" parent="." unique_id=314414915]
-position = Vector2(3121, 300)
+position = Vector2(3092, 304)
 script = ExtResource("3_pbc48")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="portal(win)" unique_id=903318402]
 position = Vector2(267.50003, 16)
@@ -39,6 +38,16 @@ texture = ExtResource("3_b4j7a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal(win)" unique_id=439752446]
 position = Vector2(272, 6)
 shape = SubResource("RectangleShape2D_pbc48")
+
+[node name="GuideLabel2" type="Label" parent="portal(win)" unique_id=1576983794]
+offset_left = 310.0
+offset_top = 108.0
+offset_right = 415.0
+offset_bottom = 157.0
+theme_override_colors/font_color = Color(0, 0.19215687, 0.44313726, 1)
+theme_override_font_sizes/font_size = 23
+text = "Jump Inside!!!
+           ↖"
 
 [node name="enemy2" parent="." unique_id=622940818 instance=ExtResource("5_b4j7a")]
 position = Vector2(556, 469)

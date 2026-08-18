@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bngsbkow554rh"]
 
 [ext_resource type="Script" uid="uid://t8ga2i460so" path="res://scripts/can.gd" id="1_py3wg"]
-[ext_resource type="Texture2D" uid="uid://cwbfjnnprecbg" path="res://art/can.png" id="2_py3wg"]
+[ext_resource type="Texture2D" uid="uid://cplwb2pl4p7fk" path="res://art/ENERGY DRINK.png" id="2_py3wg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e72jk"]
 size = Vector2(35, 46)

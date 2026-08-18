@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dwotrxjnhiot6"]
 
 [ext_resource type="PackedScene" uid="uid://bjf2kcgrvxvep" path="res://scenes/hamburger(player).tscn" id="1_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://cnpf5mn8jg0by" path="res://scenes/energy_drink.tscn" id="2_2os1m"]
 [ext_resource type="PackedScene" uid="uid://cywwtvvjsqjk3" path="res://scenes/portal(fountain).tscn" id="3_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://bpwr6268k1uts" path="res://scenes/ui_layer.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://b26rcf8mc25ht" path="res://scenes/coin.tscn" id="5_15mv3"]
@@ -12,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://mlcoh212cpp7" path="res://art/TABLE.png" id="10_2y5yt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3sih"]
-size = Vector2(5582, 290)
+size = Vector2(7648, 304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bswci"]
 size = Vector2(89, 133)
@@ -31,6 +32,9 @@ sources/0 = SubResource("TileSetAtlasSource_2y5yt")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2os1m"]
 size = Vector2(77, 44)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go7sj"]
+size = Vector2(187.75, 265)
+
 [node name="level1" type="Node2D" unique_id=718702925]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=702542599]
@@ -38,22 +42,25 @@ repeat_size = Vector2(1152, 0)
 repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=645919959]
-position = Vector2(549.00006, 304)
-scale = Vector2(1.328559, 1.4784616)
+position = Vector2(754.9375, 235.50003)
+scale = Vector2(1.6824002, 1.706154)
 texture = ExtResource("9_2y5yt")
 
 [node name="ground" type="StaticBody2D" parent="." unique_id=155364322]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground" unique_id=542090214]
-position = Vector2(637, 642)
+position = Vector2(1670, 635)
 shape = SubResource("RectangleShape2D_e3sih")
 
+[node name="EnergyDrink" parent="." unique_id=1206447438 instance=ExtResource("2_2os1m")]
+position = Vector2(2149, 421)
+
 [node name="Hamburger(player)" parent="." unique_id=455214805 instance=ExtResource("1_fcfvj")]
-position = Vector2(-579, 177)
+position = Vector2(-699.9999, 145)
 scale = Vector2(0.75, 0.75)
 
 [node name="lemon" type="StaticBody2D" parent="." unique_id=797389595]
-position = Vector2(-404, -86)
+position = Vector2(-410, -101)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="lemon" unique_id=1868865421]
@@ -66,7 +73,7 @@ position = Vector2(375.5, 516.5)
 shape = SubResource("RectangleShape2D_bswci")
 
 [node name="portal(fountain)" parent="." unique_id=1056861184 instance=ExtResource("3_pa8r4")]
-position = Vector2(2416, 346)
+position = Vector2(4127, 317)
 
 [node name="coin" parent="." unique_id=413105068 instance=ExtResource("5_15mv3")]
 position = Vector2(-552, 291)
@@ -74,17 +81,17 @@ position = Vector2(-552, 291)
 [node name="UILayer" parent="." unique_id=501483185 instance=ExtResource("5_4nkto")]
 
 [node name="enemy1" parent="." unique_id=575265585 instance=ExtResource("6_fcfvj")]
-position = Vector2(1093, 415)
+position = Vector2(1087, 404)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1734806045]
-tile_map_data = PackedByteArray("AAAQABcAAAAAAAEAAAARABcAAAAAAAEAAAASABcAAAAAAAEAAAATABcAAAAAAAEAAAAUABcAAAAAAAEAAAAVABcAAAAAAAEAAAAWABcAAAAAAAEAAAAXABcAAAAAAAEAAAAYABcAAAAAAAEAAAAZABcAAAAAAAEAAAAaABcAAAAAAAEAAAAbABcAAAAAAAEAAAAcABcAAAAAAAEAAAAdABcAAAAAAAEAAAAeABcAAAAAAAEAAAAQABgAAAAAAAEAAAARABgAAAAAAAEAAAASABgAAAAAAAEAAAATABgAAAAAAAEAAAAUABgAAAAAAAEAAAAVABgAAAAAAAEAAAAWABgAAAAAAAEAAAAXABgAAAAAAAEAAAAYABgAAAAAAAEAAAAZABgAAAAAAAEAAAAaABgAAAAAAAEAAAAbABgAAAAAAAEAAAAcABgAAAAAAAEAAAAdABgAAAAAAAEAAAAeABgAAAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAAQABcAAAAAAAEAAAARABcAAAAAAAEAAAASABcAAAAAAAEAAAATABcAAAAAAAEAAAAUABcAAAAAAAEAAAAVABcAAAAAAAEAAAAWABcAAAAAAAEAAAAXABcAAAAAAAEAAAAYABcAAAAAAAEAAAAZABcAAAAAAAEAAAAaABcAAAAAAAEAAAAbABcAAAAAAAEAAAAcABcAAAAAAAEAAAAdABcAAAAAAAEAAAAeABcAAAAAAAEAAAAQABgAAAAAAAEAAAARABgAAAAAAAEAAAASABgAAAAAAAEAAAATABgAAAAAAAEAAAAUABgAAAAAAAEAAAAVABgAAAAAAAEAAAAWABgAAAAAAAEAAAAXABgAAAAAAAEAAAAYABgAAAAAAAEAAAAZABgAAAAAAAEAAAAaABgAAAAAAAEAAAAbABgAAAAAAAEAAAAcABgAAAAAAAEAAAAdABgAAAAAAAEAAAAeABgAAAAAAAEAAAAnABMAAAAAAAEAAAAoABMAAAAAAAEAAAApABIAAAAAAAEAAAAqABIAAAAAAAEAAAArABIAAAAAAAEAAAAsABIAAAAAAAEAAAAoABIAAAAAAAEAAAAnABIAAAAAAAEAAAApABMAAAAAAAEAAAAqABMAAAAAAAEAAAArABMAAAAAAAEAAAAsABMAAAAAAAEAAAAxABUAAAAAAAEAAAAyABUAAAAAAAEAAAAzABUAAAAAAAEAAAA0ABUAAAAAAAEAAAA1ABUAAAAAAAEAAAA2ABUAAAAAAAEAAAA3ABUAAAAAAAEAAAA4ABUAAAAAAAEAAAA5ABUAAAAAAAEAAAAxABYAAAAAAAEAAAAyABYAAAAAAAEAAAAzABYAAAAAAAEAAAA0ABYAAAAAAAEAAAA1ABYAAAAAAAEAAAA2ABYAAAAAAAEAAAA3ABYAAAAAAAEAAAA4ABYAAAAAAAEAAAA5ABYAAAAAAAEAAAA=")
 tile_set = SubResource("TileSet_2os1m")
 
 [node name="can" parent="." unique_id=265648014 instance=ExtResource("8_15mv3")]
-position = Vector2(1557, 109)
+position = Vector2(1551, 81)
 
 [node name="table" type="StaticBody2D" parent="." unique_id=232519591]
-position = Vector2(130, -14)
+position = Vector2(87, -219)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="table" unique_id=1212742227]
@@ -98,3 +105,19 @@ shape = SubResource("RectangleShape2D_2os1m")
 
 [node name="coin2" parent="." unique_id=217764802 instance=ExtResource("5_15mv3")]
 position = Vector2(85, 223)
+
+[node name="coin3" parent="." unique_id=1530353612 instance=ExtResource("5_15mv3")]
+position = Vector2(647, 121)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1258993631]
+position = Vector2(2642, 296)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=204397825]
+position = Vector2(60.999943, 67.000015)
+scale = Vector2(1.968749, 1.9085715)
+texture = ExtResource("7_pa8r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2059683188]
+position = Vector2(64.125, 67.5)
+shape = SubResource("RectangleShape2D_go7sj")
