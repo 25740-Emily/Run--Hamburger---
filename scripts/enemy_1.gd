@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 @export var speed: float = 60.0
-@export var walk_distance: float = 80.0
+@export var walk_distance: float = 150
 
 var start_x: float
 var direction: int = 1 
