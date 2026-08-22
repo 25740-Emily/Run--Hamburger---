@@ -8,7 +8,7 @@
 size = Vector2(36, 98.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejytf"]
-size = Vector2(40, 101)
+size = Vector2(43, 105)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5oq2"]
 atlas = ExtResource("3_ejytf")
@@ -97,7 +97,7 @@ shape = SubResource("RectangleShape2D_a1412")
 [node name="damagearea" type="Area2D" parent="." unique_id=554731191]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damagearea" unique_id=905948314]
-position = Vector2(41, 41.5)
+position = Vector2(40.5, 39.5)
 shape = SubResource("RectangleShape2D_ejytf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=32468103]

@@ -50,7 +50,7 @@ text = "Jump Inside!!!
            ↖"
 
 [node name="enemy2" parent="." unique_id=622940818 instance=ExtResource("5_b4j7a")]
-position = Vector2(556, 469)
+position = Vector2(560, 490)
 walk_distance = 450.0
 
 [node name="clam" parent="." unique_id=801750930 instance=ExtResource("7_y0kc7")]

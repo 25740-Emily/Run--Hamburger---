@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://t8ga2i460so" path="res://scripts/can.gd" id="1_py3wg"]
 [ext_resource type="Texture2D" uid="uid://cplwb2pl4p7fk" path="res://art/ENERGY DRINK.png" id="2_py3wg"]
+[ext_resource type="AudioStream" uid="uid://btd31pvpolbt6" path="res://music/can dropping.mp3" id="3_84rve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e72jk"]
 size = Vector2(35, 46)
@@ -37,6 +38,9 @@ shape = SubResource("RectangleShape2D_wgna5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1475279391]
 position = Vector2(-42.5, 26.5)
 shape = SubResource("RectangleShape2D_khftl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1176819390]
+stream = ExtResource("3_84rve")
 
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
 [connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]

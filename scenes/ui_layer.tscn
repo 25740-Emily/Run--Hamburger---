@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cesawnjdbwvtt" path="res://scenes/life_bar.tscn" id="2_6syxi"]
 [ext_resource type="PackedScene" uid="uid://bxcwqb52fw3q8" path="res://scenes/score.tscn" id="3_6gmgv"]
 [ext_resource type="PackedScene" uid="uid://cvya3ydk5sruv" path="res://scenes/home.tscn" id="4_6syxi"]
+[ext_resource type="PackedScene" uid="uid://dlwd84yoe85g2" path="res://scenes/ink_overlay.tscn" id="5_6gmgv"]
 
 [node name="UILayer" type="CanvasLayer" unique_id=501483185]
 
@@ -31,5 +32,7 @@ offset_left = 998.0
 offset_top = -30.0
 offset_right = 1126.0
 offset_bottom = 99.0
+
+[node name="InkOverlay" parent="." unique_id=1287293324 instance=ExtResource("5_6gmgv")]
 
 [connection signal="gui_input" from="Home" to="Home" method="_on_gui_input"]

@@ -56,11 +56,20 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
+	# 获取输入方向
 	var direction := Input.get_axis("left", "right")
+	
 	if direction:
+		# 有按键输入时，正常控制左右移动
 		velocity.x = direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		# 没有按键输入时：
+		if is_on_floor():
+			# 只有踩在地面上才迅速停下
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+		else:
+			# ✈️ 在空中时使用平滑减速（例如每秒只衰减 200 速度），保留被弹飞的抛物线惯性！
+			velocity.x = move_toward(velocity.x, 0, 200.0 * delta)
 
 	move_and_slide()
 	

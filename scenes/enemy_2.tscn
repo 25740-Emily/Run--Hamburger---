@@ -7,7 +7,7 @@
 size = Vector2(192, 183)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oh86k"]
-size = Vector2(392, 369)
+size = Vector2(359, 369)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oh86k"]
 atlas = ExtResource("2_fi5i3")
@@ -61,7 +61,7 @@ disabled = true
 [node name="DetectArea" type="Area2D" parent="." unique_id=1165112562]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=1142559699]
-position = Vector2(-12, -4.5)
+position = Vector2(-11.5, -4.5)
 shape = SubResource("RectangleShape2D_oh86k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1235069125]
@@ -75,6 +75,15 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damagearea" unique_id=1448539899]
 position = Vector2(-2, 6)
 shape = SubResource("RectangleShape2D_a4ywr")
+
+[node name="Label" type="Label" parent="." unique_id=2079736601]
+offset_left = -83.0
+offset_top = -126.0
+offset_right = 73.0
+offset_bottom = -92.0
+theme_override_colors/font_color = Color(0.64705884, 0, 0.15294118, 1)
+theme_override_font_sizes/font_size = 24
+text = "INK ATTACK!!!"
 
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
 [connection signal="body_entered" from="damagearea" to="." method="_on_damagearea_body_entered"]

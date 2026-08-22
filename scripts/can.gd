@@ -25,6 +25,8 @@ func _physics_process(delta: float) -> void:
 			velocity.y = drop_speed
 			var moved_distance = global_position.y - start_y
 			
+			$AudioStreamPlayer2D.play()
+			
 			# 达到指定距离，切换到等待状态
 			if moved_distance >= drop_distance:
 				current_state = State.WAITING
