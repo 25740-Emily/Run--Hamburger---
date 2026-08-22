@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://buvd7obc3e155"]
+
+[ext_resource type="Script" uid="uid://cnqyaeuccf2l" path="res://scripts/ribslide.gd" id="1_2p3gr"]
+[ext_resource type="Texture2D" uid="uid://bjihnbak3eyxn" path="res://art/芭比大肋排.png" id="1_a6yi0"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_2p3gr"]
+points = PackedVector2Array(-195, 220, -275, 176, -322, -92, -195, -106, -207, 76, -130, 147, 65, 151, 119, -198, 268, -204, 229, 56, 147, 182, 46, 236, -113, 257)
+
+[node name="Ribslide" type="Area2D" unique_id=1070417840]
+script = ExtResource("1_2p3gr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1824029450]
+position = Vector2(1, -12)
+shape = SubResource("ConvexPolygonShape2D_2p3gr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1445440268]
+scale = Vector2(8.3828125, 7.714286)
+texture = ExtResource("1_a6yi0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

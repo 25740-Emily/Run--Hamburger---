@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cpc8diyj63kgv" path="res://art/level1.png" id="9_2y5yt"]
 [ext_resource type="Texture2D" uid="uid://cgelan4wa4jub" path="res://art/New Piskel (4).png" id="9_e3sih"]
 [ext_resource type="Texture2D" uid="uid://mlcoh212cpp7" path="res://art/TABLE.png" id="10_2y5yt"]
+[ext_resource type="PackedScene" uid="uid://buvd7obc3e155" path="res://scenes/ribslide.tscn" id="12_go7sj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3sih"]
 size = Vector2(5031, 304)
@@ -62,7 +63,7 @@ shape = SubResource("RectangleShape2D_e3sih")
 position = Vector2(2149, 421)
 
 [node name="Hamburger(player)" parent="." unique_id=455214805 instance=ExtResource("1_fcfvj")]
-position = Vector2(1002, 251)
+position = Vector2(2052, 356)
 scale = Vector2(0.75, 0.75)
 
 [node name="lemon" type="StaticBody2D" parent="." unique_id=797389595]
@@ -140,3 +141,6 @@ shape = SubResource("RectangleShape2D_7gny6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hole" unique_id=701965142]
 position = Vector2(2956, 725)
 shape = SubResource("RectangleShape2D_2aecg")
+
+[node name="Ribslide" parent="hole" unique_id=1070417840 instance=ExtResource("12_go7sj")]
+position = Vector2(3478, 295)
